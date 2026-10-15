@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: only light !important;
+  forced-color-adjust: none;
+  --text: #111111;
+  --text-soft: #4b4b4b;
+  --text-h: #000000;
+  --bg: #ffffff;
+  --panel: #ffffff;
+  --border: #e5e7eb;
+  --accent: #111111;
+  --accent-light: #ffffff;
+  --accent-bg: #ffffff;
+  --accent-border: #111111;
+  --shadow: rgba(0, 0, 0, 0.06) 0 10px 25px -5px, rgba(0, 0, 0, 0.03) 0 8px 10px -6px;
+
+  --sans: 'Inter', system-ui, sans-serif;
+  --heading: 'Fraunces', serif;
+
+  font: 16px/145% var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root {
+  color-scheme: only light !important;
+  forced-color-adjust: none;
+  margin: 0;
+  background-color: #ffffff !important;
+  color: #111111 !important;
+  min-height: 100svh;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  font-family: var(--heading);
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+/* Force light inputs and override autofill dark styling */
+input, select, textarea {
+  color-scheme: only light !important;
+  background-color: #ffffff !important;
+  color: #111111 !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+  -webkit-text-fill-color: #111111 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
